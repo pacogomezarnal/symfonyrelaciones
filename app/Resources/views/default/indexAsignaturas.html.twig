@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container purple lighten-3">
+  <nav>
+    <div class="nav-wrapper  indigo lighten-2">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="sass.html">Profesor</a></li>
+        <li  class="active"><a href="badges.html">Asignaturas</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container white">
+  <div class="row formulario">
+    <div class="col s3"></div>
+    <div class="col s6">
+      {{form_start(form)}}
+      {{form_widget(form)}}
+      {{form_end(form)}}
+    </div>
+    <div class="col s3"></div>
+  </div>
+</div>
+{% endblock %}
+{% block stylesheets %}
+<style>
+.formulario {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+</style>
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript">
+  var options;
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+</script>
+{% endblock %}

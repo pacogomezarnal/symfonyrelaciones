@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body class="indigo lighten-5">
+        <div class="navbar-fixed">
+          <nav>
+            <div class="nav-wrapper indigo darken-4">
+              <a href="{{path('homepage')}}" class="brand-logo">Relaciones</a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">Nuevo profesor</a></li>
+                <li><a href="badges.html">Enlace vacio</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        {% block body %}{% endblock %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
